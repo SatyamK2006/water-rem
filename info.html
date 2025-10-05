@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Information | Water Reminder</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <style>
+    .content { text-align: left; }
+    .section { background: #ffffff; border: 1px solid #e6f3fb; border-radius: 16px; box-shadow: 0 10px 30px rgba(2,132,199,0.08); padding: 20px; margin: 16px 0; }
+    .list { margin: 8px 0 0 18px; color: #334155; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner container">
+      <div class="brand">Water Reminder</div>
+      <div class="nav-links">
+        <a href="index.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="info.html">Information</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container content">
+    <h2>The Importance of Drinking Water</h2>
+    <div class="section">
+      <p>Water supports every system in the body. Staying hydrated helps regulate body temperature, lubricate joints, transport nutrients, support brain function, and maintain healthy skin.</p>
+      <p>As a general guideline, aim for 2–3 liters per day depending on your body, climate, and activity level. Listen to your thirst cues, and increase intake during exercise and hot weather.</p>
+    </div>
+
+    <h3>Signs and Side Effects of Dehydration</h3>
+    <div class="section">
+      <ul class="list">
+        <li>Dry mouth, thirst, and dark yellow urine</li>
+        <li>Headaches, dizziness, and fatigue</li>
+        <li>Reduced concentration and mood changes</li>
+        <li>Muscle cramps and reduced physical performance</li>
+        <li>Constipation and kidney stress when prolonged</li>
+      </ul>
+    </div>
+
+    <h3>Simple Hydration Tips</h3>
+    <div class="section">
+      <ul class="list">
+        <li>Keep a reusable bottle nearby and sip regularly</li>
+        <li>Set periodic reminders (use the app’s reminder feature)</li>
+        <li>Flavor your water with lemon, mint, or cucumber</li>
+        <li>Eat water-rich foods like fruits and vegetables</li>
+        <li>Drink extra water before, during, and after exercise</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Water Reminder</div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+

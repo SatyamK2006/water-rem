@@ -1,0 +1,132 @@
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: linear-gradient(120deg, #eaf7ff, #ffffff, #e6f3fb);
+  background-size: 400% 400%;
+  animation: skyShift 16s ease infinite;
+  color: #0f172a;
+  text-align: center;
+  margin: 0;
+}
+
+/* Typography */
+h1, h2, h3 { color: #0b5394; margin: 16px 0; }
+p { color: #334155; }
+
+/* Layout helpers */
+.container { max-width: 960px; margin: 0 auto; padding: 24px; }
+.auth-wrapper { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 24px; max-width: 1100px; margin: 24px auto; padding: 0 24px; }
+.hero { text-align: left; }
+.hero h2 { font-size: 36px; line-height: 1.2; margin: 8px 0 12px; }
+.hero p { max-width: 520px; }
+.illustration { position: relative; }
+.droplet { position: absolute; width: 12px; height: 18px; background: #38bdf8; border-radius: 8px 8px 10px 10px; opacity: 0.8; filter: drop-shadow(0 6px 10px rgba(2,132,199,0.25)); animation: fall 6s linear infinite; }
+.droplet.small { width: 8px; height: 12px; opacity: 0.7; animation-duration: 7s; }
+.droplet.big { width: 16px; height: 24px; opacity: 0.9; animation-duration: 5.5s; }
+.wave { width: 100%; height: 160px; }
+@keyframes fall { 0%{ transform: translateY(-20px);} 100%{ transform: translateY(180px);} }
+
+/* Navigation */
+.navbar {
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; }
+.brand { font-weight: 700; color: #0284c7; letter-spacing: 0.3px; }
+.nav-links a { margin-left: 16px; color: #0b5394; text-decoration: none; font-weight: 600; }
+.nav-links a:hover { color: #0284c7; }
+
+/* Cards & forms */
+form, .card {
+  background: #ffffff;
+  display: inline-block;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(2,132,199,0.12);
+  border: 1px solid #e6f3fb;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+form:hover, .card:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(2,132,199,0.16); }
+
+input, button {
+  margin: 10px auto;
+  display: block;
+  padding: 10px 12px;
+  width: 80%;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+input:focus { outline: none; border-color: #38bdf8; box-shadow: 0 0 0 3px rgba(56,189,248,0.2); }
+
+button {
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  transition: transform 150ms ease, box-shadow 150ms ease, filter 150ms ease;
+}
+button:hover { filter: brightness(0.97); box-shadow: 0 8px 20px rgba(14,165,233,0.25); }
+button:active { transform: translateY(1px) scale(0.99); }
+
+a { color: #0ea5e9; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Footer */
+.footer { border-top: 1px solid #e2e8f0; margin-top: 32px; }
+.footer .container { padding: 16px 24px; color: #64748b; font-size: 14px; }
+
+/* Progress */
+.progress {
+  width: 100%;
+  height: 12px;
+  background: #e6f3fb;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #dbeafe;
+}
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  transition: width 600ms ease;
+}
+
+/* Micro animations */
+.pulse {
+  animation: pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(56,189,248,0.4); }
+  50% { transform: scale(1.01); box-shadow: 0 0 0 8px rgba(56,189,248,0); }
+}
+
+/* Background animation */
+@keyframes skyShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  body { animation: none; }
+  .pulse { animation: none; }
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .container { padding: 16px; }
+  .nav-inner { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .nav-links a { margin: 8px 12px 0 0; display: inline-block; }
+  form, .card { width: 100%; padding: 20px; }
+  input, button { width: 100%; }
+  h1, h2, h3 { margin: 12px 0; }
+  .auth-wrapper { grid-template-columns: 1fr; gap: 12px; margin: 12px auto; padding: 0 16px; }
+  .hero { text-align: center; }
+}

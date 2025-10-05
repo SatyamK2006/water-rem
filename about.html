@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About | Water Reminder</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <style>
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
+    .member { padding: 20px; text-align: left; }
+    .member h4 { margin: 8px 0 4px; color: #0b5394; }
+    .muted { color: #64748b; font-size: 14px; }
+  </style>
+  </head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner container">
+      <div class="brand">Water Reminder</div>
+      <div class="nav-links">
+        <a href="index.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="info.html">Information</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>About Us</h2>
+    <p>This project helps you build a healthy hydration habit with gentle reminders and simple tracking.</p>
+
+    <div class="team-grid">
+      <div class="card member">
+        <h4>Satyam Khandual</h4>
+        <p class="muted">Phone: +91 98765 43210</p>
+        <p class="muted">Email: satyam.khandual@example.com</p>
+      </div>
+      <div class="card member">
+        <h4>Sanskar Sawant</h4>
+        <p class="muted">Phone: +91 91234 56780</p>
+        <p class="muted">Email: sanskar.sawant@example.com</p>
+      </div>
+      <div class="card member">
+        <h4>Tohid Solkar</h4>
+        <p class="muted">Phone: +91 90123 45678</p>
+        <p class="muted">Email: tohid.solkar@example.com</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Water Reminder</div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
